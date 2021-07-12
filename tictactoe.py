@@ -5,7 +5,7 @@ def genBoard(dimension):
 def printBoard(board):
     for i in range(len(board)):
         for j in range(len(board)):
-            print(board[i][j]),
+            print(board[i][j], end = " ")
         print("\n")
 
 def checkWinDiag1(board):
@@ -68,7 +68,7 @@ def finalCondition(board):
 
 win = False
 
-dimension = input("Please enter the dimension of the tic tac toe board: ")
+dimension = int(input("Please enter the dimension of the tic tac toe board: "))
 board = genBoard(dimension)
 print("this is the current board")
 printBoard(board)
@@ -84,8 +84,8 @@ while(win == False):
         print("it's a tie")
         break
     while (valid_input1 == False):
-        p1_x = input("Player 1 (X): enter the x location for your move: ")
-        p1_y = input("Player 1 (X): enter the y location for your move: ")
+        p1_x = int(input("Player 1 (X): enter the x location for your move: "))
+        p1_y = int(input("Player 1 (X): enter the y location for your move: "))
         if (board[p1_y][p1_x] == "-"):
             board[p1_y][p1_x] = "X"
             valid_input1 = True
@@ -102,8 +102,8 @@ while(win == False):
         break
     valid_input2 = False
     while(valid_input2 == False):
-        p2_x = input("Player 2 (O): enter the x location for your move: ")
-        p2_y = input("Player 2 (O): enter the y location for your move: ")
+        p2_x = int(input("Player 2 (O): enter the x location for your move: "))
+        p2_y = int(input("Player 2 (O): enter the y location for your move: "))
         if (board[p2_y][p2_x] == "-"):
             board[p2_y][p2_x] = "O"
             valid_input2 = True
