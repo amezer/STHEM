@@ -55,13 +55,7 @@ def checkWinVertical(board):
     return False
 
 def finalCondition(board):
-    if (checkWinDiag1(board)):
-        return True
-    elif (checkWinDiag2(board)):
-        return True
-    elif (checkWinHorizontal(board)):
-        return True
-    elif (checkWinVertical(board)):
+    if (checkWinDiag1(board) or checkWinDiag2(board) or checkWinHorizontal(board) or checkWinVertical(board)):
         return True
     else:
         return False
